@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="BaseAngular">
+
+<head>
+<meta charset="utf-8">
+<title>AngularJS Test</title>
+
+<link rel="stylesheet" href="styles/index.css" />
+
+</head>
+
+<body ng-controller="mainCtrl as mc">
+	
+	<header ng-style="mc.myStyle">
+    	<h1>{{"Hello"+" World"}}</h1>
+	</header>
+	
+	<h1>AngularJS, SASS, Browsersync, Gulp.js</h1>
+	
+	<!-- form-main -->
+    <form-main form-message="mc.message" second-message="What up people! I am the second message" ng-click="mc.changeBackground()"></form-main>
+    <!-- form-main -->
+    
+    <label>The scopes are just examples</label>
+
+	<footer>
+		<a href="http://www.davidrldev.com" target="_blank">David Rojas</a>
+	</footer>
+	
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="../node_modules/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="scripts/app.js"></script>
+	<script type="text/javascript" src="common/directives/form-main/form-main.directive.js"></script>
+	<script type='text/javascript' id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://HOST:8082/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));
+    //]]></script>
+</body>
+
+</html>
